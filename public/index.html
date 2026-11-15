@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>World Cup 26 has ended. See you in 2030.</title>
+<meta name="description" content="The 2026 FIFA World Cup is over. Spain are champions. Live countdown to the next World Cup." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<style>
+:root { --bg:#08090c; --panel:#0e1217; --raised:#141a21; --line:#26303b; --ink:#e9edf1; --muted:#8893a1; --amber:#f2b705; --pass:#39d98a; --trace:#3a4654; --col:1180px; --display:"Archivo","Arial Narrow",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace; color-scheme:dark; }
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--display)}
+body{min-height:100vh;display:flex;flex-direction:column;
+  background-image:linear-gradient(var(--raised) 1px,transparent 1px),linear-gradient(90deg,var(--raised) 1px,transparent 1px);background-size:44px 44px;background-position:-1px -1px}
+.site-bar { position:sticky; top:0; z-index:40; display:flex; flex-wrap:wrap; align-items:center; gap:6px 14px; min-height:52px; padding:8px max(16px,calc((100% - var(--col))/2 + 16px)); background:var(--bg); border-bottom:1px solid var(--line); }
+.site-mark { font:800 17px/1 var(--display); font-stretch:125%; letter-spacing:.02em; display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink); padding-block:6px; }
+.site-mark i { width:10px; height:10px; background:var(--amber); clip-path:polygon(0 0,100% 0,100% 100%); }
+.site-crumb { font:500 11px/1.5 var(--mono); color:var(--muted); }
+main{flex:1;width:100%;max-width:var(--col);margin:0 auto;padding:clamp(40px,9vh,96px) 16px 48px}
+.eyebrow{font:500 11px/1.5 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.eyebrow b{color:var(--amber);font-weight:600}
+h1{font-weight:800;font-stretch:125%;font-size:clamp(34px,7vw,76px);line-height:.98;letter-spacing:-.01em;margin:14px 0 10px}
+.see{font-weight:800;font-stretch:125%;font-size:clamp(26px,5vw,52px);line-height:1.05;margin:0;color:var(--amber)}
+.exact{font:500 clamp(13px,1.6vw,16px)/1.6 var(--mono);color:var(--muted);margin:12px 0 0}
+.exact b{color:var(--ink);font-weight:600}
+.clock{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:34px 0 0;max-width:720px}
+.cell{background:var(--panel);border:1px solid var(--line);border-top:2px solid var(--amber);border-radius:3px;padding:16px 10px 12px;text-align:center}
+.cell .n{font:600 clamp(28px,6vw,54px)/1 var(--mono);font-variant-numeric:tabular-nums}
+.cell .l{font:500 10px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px;margin-top:34px;max-width:720px}
+.fact{background:var(--panel);border:1px solid var(--line);border-radius:3px;padding:14px 16px}
+.fact .k{font:500 10px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--pass);margin-bottom:8px}
+.fact .v{font-size:15px;line-height:1.45}
+.fact .v b{font-weight:700}
+.back{display:inline-block;margin-top:34px;font:500 12px/1 var(--mono);color:var(--muted);text-decoration:none;border:1px solid var(--line);padding:10px 14px;border-radius:3px;background:var(--bg)}
+.back:hover,.back:focus-visible{color:var(--ink);border-color:var(--amber)}
+:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="site-bar"><a class="site-mark" href="/" aria-label="blurxy home"><i aria-hidden="true"></i>blurxy</a><span class="site-crumb">board / world cup 2026</span></header>
+<main>
+  <div class="eyebrow"><b>Full time</b> &middot; FIFA World Cup 26 &middot; USA &middot; Canada &middot; Mexico</div>
+  <h1>The World Cup has ended.</h1>
+  <p class="see" id="see">See you in 2030.</p>
+  <p class="exact" id="exact" aria-live="polite"><noscript>The next World Cup starts on 8 June 2030.</noscript></p>
+
+  <div class="clock" id="clock" role="timer" aria-label="Countdown to the next World Cup">
+    <div class="cell"><div class="n" id="cd">--</div><div class="l">days</div></div>
+    <div class="cell"><div class="n" id="ch">--</div><div class="l">hours</div></div>
+    <div class="cell"><div class="n" id="cm">--</div><div class="l">min</div></div>
+    <div class="cell"><div class="n" id="cs">--</div><div class="l">sec</div></div>
+  </div>
+
+  <div class="facts">
+    <div class="fact"><div class="k">Champions</div><div class="v"><b>Spain</b> beat Argentina 1&ndash;0 after extra time in the final, 19 July 2026, New York/New Jersey.</div></div>
+    <div class="fact"><div class="k">Next up</div><div class="v" id="next"><b>World Cup 2030</b> &middot; Spain, Portugal and Morocco. The centenary opener is in Montevideo on 8 June 2030.</div></div>
+  </div>
+
+  <a class="back" href="/">&larr; back to the board</a>
+</main>
+<script>
+/* Every /worldcup26 URL serves this page. Show the clean address. */
+try{ if(location.pathname!=="/worldcup26/"||location.search||location.hash) history.replaceState(null,"","/worldcup26/"); }catch(e){}
+
+/* Known tournaments. A later edition without announced dates counts to 1 January of its year and says so. */
+const CUPS=[
+ {year:2030, start:"2030-06-08T00:00:00-03:00", end:"2030-07-22T00:00:00Z", day:"8 June 2030", where:"Spain, Portugal and Morocco. The centenary opener is in Montevideo on 8 June 2030."},
+ {year:2034, start:null, end:null, where:"Saudi Arabia. Dates not announced yet."}
+];
+function nextCup(now){
+ for(const c of CUPS){
+  const s=c.start?new Date(c.start):new Date(c.year+"-01-01T00:00:00Z"), e=c.end?new Date(c.end):null;
+  if(e&&now>=s&&now<e) return {c, s, live:true};
+  if(now<s) return {c, s, live:false};
+ }
+ let y=now.getUTCFullYear()+1; while(y%4!==2) y++;
+ return {c:{year:y,where:"Dates not announced yet."}, s:new Date(y+"-01-01T00:00:00Z"), live:false};
+}
+/* Calendar difference: whole years, then months, then days. */
+function ymd(from,to){
+ let y=0,m=0,d=0; const t=new Date(from);
+ const add=(dt,k,n)=>{const x=new Date(dt); if(k==="y")x.setFullYear(x.getFullYear()+n); else if(k==="m")x.setMonth(x.getMonth()+n); else x.setDate(x.getDate()+n); return x;};
+ while(add(t,"y",y+1)<=to) y++;
+ let a=add(t,"y",y); while(add(a,"m",m+1)<=to) m++;
+ let b=add(a,"m",m); while(add(b,"d",d+1)<=to) d++;
+ return {y,m,d};
+}
+const plural=(n,w)=>n+" "+w+(n===1?"":"s");
+const pad=n=>String(n).padStart(2,"0");
+function tick(){
+ const now=new Date(), {c,s,live}=nextCup(now);
+ document.getElementById("next").innerHTML="<b>World Cup "+c.year+"</b> &middot; "+c.where;
+ if(live){
+  document.getElementById("see").textContent="Plot twist: the "+c.year+" World Cup is on right now.";
+  document.getElementById("exact").textContent="Go watch it.";
+  ["cd","ch","cm","cs"].forEach(id=>document.getElementById(id).textContent="00");
+  return;
+ }
+ const ms=s-now, k=ymd(now,s), parts=[];
+ if(k.y)parts.push(plural(k.y,"year")); if(k.m)parts.push(plural(k.m,"month")); if(k.d||!parts.length)parts.push(plural(k.d,"day"));
+ const years=Math.max(1,Math.round(ms/(365.2425*864e5)));
+ document.getElementById("see").textContent="See you in "+plural(years,"year")+".";
+ const exact=parts.length>1?parts.slice(0,-1).join(", ")+" and "+parts[parts.length-1]:parts[0];
+ document.getElementById("exact").innerHTML="Well, <b>"+exact+"</b>, to be exact. First ball: "+(c.day||s.toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric",timeZone:"UTC"}))+".";
+ const sec=Math.floor(ms/1000);
+ document.getElementById("cd").textContent=Math.floor(sec/86400);
+ document.getElementById("ch").textContent=pad(Math.floor(sec%86400/3600));
+ document.getElementById("cm").textContent=pad(Math.floor(sec%3600/60));
+ document.getElementById("cs").textContent=pad(sec%60);
+}
+tick(); setInterval(tick,1000);
+</script>
+</body>
+</html>
