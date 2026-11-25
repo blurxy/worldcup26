@@ -1,118 +1,678 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>World Cup 26 has ended. See you in 2030.</title>
-<meta name="description" content="The 2026 FIFA World Cup is over. Spain are champions. Live countdown to the next World Cup." />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 World Cup Results &amp; Archive | blurxy</title>
+<meta name="description" content="Explore all 104 results from the 2026 FIFA World Cup, from the group stage to Spain’s 1–0 win over Argentina in the final.">
+<link rel="canonical" href="https://blurxy.net/worldcup26/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="blurxy">
+<meta property="og:title" content="2026 World Cup Results &amp; Archive">
+<meta property="og:description" content="All 104 match results from the 2026 FIFA World Cup, including Spain’s 1–0 win over Argentina in the final.">
+<meta property="og:url" content="https://blurxy.net/worldcup26/">
+<meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap">
 <style>
-:root { --bg:#08090c; --panel:#0e1217; --raised:#141a21; --line:#26303b; --ink:#e9edf1; --muted:#8893a1; --amber:#f2b705; --pass:#39d98a; --trace:#3a4654; --col:1180px; --display:"Archivo","Arial Narrow",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace; color-scheme:dark; }
-*{box-sizing:border-box}
-html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--display)}
-body{min-height:100vh;display:flex;flex-direction:column;
-  background-image:linear-gradient(var(--raised) 1px,transparent 1px),linear-gradient(90deg,var(--raised) 1px,transparent 1px);background-size:44px 44px;background-position:-1px -1px}
-.site-bar { position:sticky; top:0; z-index:40; display:flex; flex-wrap:wrap; align-items:center; gap:6px 14px; min-height:52px; padding:8px max(16px,calc((100% - var(--col))/2 + 16px)); background:var(--bg); border-bottom:1px solid var(--line); }
-.site-mark { font:800 17px/1 var(--display); font-stretch:125%; letter-spacing:.02em; display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink); padding-block:6px; }
-.site-mark i { width:10px; height:10px; background:var(--amber); clip-path:polygon(0 0,100% 0,100% 100%); }
-.site-crumb { font:500 11px/1.5 var(--mono); color:var(--muted); }
-main{flex:1;width:100%;max-width:var(--col);margin:0 auto;padding:clamp(40px,9vh,96px) 16px 48px}
-.eyebrow{font:500 11px/1.5 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-.eyebrow b{color:var(--amber);font-weight:600}
-h1{font-weight:800;font-stretch:125%;font-size:clamp(34px,7vw,76px);line-height:.98;letter-spacing:-.01em;margin:14px 0 10px}
-.see{font-weight:800;font-stretch:125%;font-size:clamp(26px,5vw,52px);line-height:1.05;margin:0;color:var(--amber)}
-.exact{font:500 clamp(13px,1.6vw,16px)/1.6 var(--mono);color:var(--muted);margin:12px 0 0}
-.exact b{color:var(--ink);font-weight:600}
-.clock{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:34px 0 0;max-width:720px}
-.cell{background:var(--panel);border:1px solid var(--line);border-top:2px solid var(--amber);border-radius:3px;padding:16px 10px 12px;text-align:center}
-.cell .n{font:600 clamp(28px,6vw,54px)/1 var(--mono);font-variant-numeric:tabular-nums}
-.cell .l{font:500 10px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:10px}
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px;margin-top:34px;max-width:720px}
-.fact{background:var(--panel);border:1px solid var(--line);border-radius:3px;padding:14px 16px}
-.fact .k{font:500 10px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--pass);margin-bottom:8px}
-.fact .v{font-size:15px;line-height:1.45}
-.fact .v b{font-weight:700}
-.back{display:inline-block;margin-top:34px;font:500 12px/1 var(--mono);color:var(--muted);text-decoration:none;border:1px solid var(--line);padding:10px 14px;border-radius:3px;background:var(--bg)}
-.back:hover,.back:focus-visible{color:var(--ink);border-color:var(--amber)}
-:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+:root {
+  --bg: #08090c;
+  --panel: #0e1217;
+  --raised: #141a21;
+  --line: #26303b;
+  --ink: #e9edf1;
+  --muted: #aab2be;
+  --amber: #f2b705;
+  --display: "Archivo", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+  --content: 1120px;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background-color: var(--bg);
+  background-image: linear-gradient(var(--raised) 1px, transparent 1px), linear-gradient(90deg, var(--raised) 1px, transparent 1px);
+  background-size: 44px 44px;
+  background-position: -1px -1px;
+  font: 400 1rem/1.5 var(--display);
+}
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
+.wrap { width: min(100% - 2rem, var(--content)); margin-inline: auto; }
+.site-bar { position: sticky; top: 0; z-index: 1; background: var(--bg); border-bottom: 1px solid var(--line); }
+.site-bar .wrap { min-height: 52px; display: flex; align-items: center; gap: .65rem; }
+.site-mark { display: inline-flex; align-items: center; gap: .6rem; font-weight: 800; font-stretch: 125%; text-decoration: none; }
+.site-mark::before { content: ""; width: 10px; height: 10px; background: var(--amber); clip-path: polygon(0 0,100% 0,100% 100%); }
+.site-crumb { color: var(--muted); font: 500 .72rem var(--mono); }
+main { padding-block: clamp(2.25rem, 7vw, 5rem) 3rem; }
+[id] { scroll-margin-top: 4.25rem; }
+h1, h2, h3, p { margin: 0; }
+h1 { font-size: clamp(2.25rem, 7.6vw, 5.125rem); font-weight: 800; font-stretch: 115%; line-height: .98; letter-spacing: -.042em; }
+h2 { font-size: clamp(1.65rem, 4.5vw, 2.5rem); line-height: 1.15; letter-spacing: -.025em; }
+h3 { font-size: clamp(1.15rem, 3.5vw, 1.35rem); }
+.intro { margin-top: .9rem; color: var(--muted); }
+.feature {
+  margin-block: clamp(1.6rem, 4vw, 3rem) .85rem;
+  padding: clamp(.85rem, 3.5vw, 2.2rem);
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--amber);
+  background: var(--panel);
+}
+.feature-title { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .15rem 1rem; }
+.feature-title h2 { font: 600 .85rem var(--mono); color: var(--amber); }
+.match-meta { color: var(--muted); font: 400 .75rem/1.5 var(--mono); }
+.feature .fixture { padding-block: clamp(1.1rem, 4vw, 2.3rem) .45rem; }
+.feature .team { font-size: clamp(1rem, 4.7vw, 3rem); font-weight: 800; letter-spacing: -.03em; }
+.feature .score { color: var(--amber); font-size: clamp(1.6rem, 7vw, 4.4rem); line-height: 1; }
+.feature-caption { text-align: center; color: var(--muted); font-size: .9rem; }
+.placements { display: flex; flex-wrap: wrap; gap: .45rem 1.5rem; color: var(--muted); }
+.placements strong { color: var(--ink); }
+.jumps { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: 1.8rem; }
+.group-jumps { margin: 0 0 1rem; }
+.jump, .back { display: inline-block; background: var(--panel); border: 1px solid var(--line); border-radius: 3px; padding: .48rem .8rem; text-decoration: none; }
+.jump:hover, .back:hover { border-color: var(--amber); }
+.stage { margin-top: clamp(2.8rem, 6vw, 4.6rem); }
+.stage-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .35rem 1rem; margin-bottom: 1rem; }
+.section-note { color: var(--muted); font-size: .9rem; }
+.rounds, .groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; align-items: start; }
+.rounds > section, .groups > section { background: var(--panel); border: 1px solid var(--line); }
+.rounds h3, .groups h3 { background: var(--raised); padding: .6rem .9rem; border-bottom: 1px solid var(--line); }
+.wide { grid-column: 1 / -1; }
+.wide .matches { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.matches { list-style: none; padding: 0; margin: 0; }
+.match { padding: .6rem .75rem .65rem; }
+.match + .match { border-top: 1px solid var(--line); }
+.wide .match:nth-child(2n) { border-left: 1px solid var(--line); }
+.wide .match:nth-child(2) { border-top: 0; }
+.match .match-meta { text-align: center; margin-bottom: .15rem; }
+.fixture { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: clamp(.45rem, 1.7vw, 1.3rem); align-items: center; }
+.team { text-wrap: pretty; overflow-wrap: anywhere; }
+.team:first-child { text-align: right; }
+.winner { font-weight: 700; }
+.score { min-width: 2.6rem; text-align: center; white-space: nowrap; font: 600 1.05rem/1.3 var(--mono); font-variant-numeric: tabular-nums; }
+.tiebreak { margin-top: .15rem; color: var(--muted); text-align: center; font-size: .85rem; }
+footer { margin-top: 2.4rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); }
+footer a:hover { color: var(--amber); }
+.back { margin-top: .9rem; }
+@media (max-width: 43rem) {
+  .rounds, .groups, .wide .matches { grid-template-columns: minmax(0, 1fr); }
+  .wide .match:nth-child(2n) { border-left: 0; }
+  .wide .match:nth-child(2) { border-top: 1px solid var(--line); }
+}
 </style>
 </head>
 <body>
-<header class="site-bar"><a class="site-mark" href="/" aria-label="blurxy home"><i aria-hidden="true"></i>blurxy</a><span class="site-crumb">board / world cup 2026</span></header>
-<main>
-  <div class="eyebrow"><b>Full time</b> &middot; FIFA World Cup 26 &middot; USA &middot; Canada &middot; Mexico</div>
-  <h1>The World Cup has ended.</h1>
-  <p class="see" id="see">See you in 2030.</p>
-  <p class="exact" id="exact" aria-live="polite"><noscript>The next World Cup starts on 8 June 2030.</noscript></p>
-
-  <div class="clock" id="clock" role="timer" aria-label="Countdown to the next World Cup">
-    <div class="cell"><div class="n" id="cd">--</div><div class="l">days</div></div>
-    <div class="cell"><div class="n" id="ch">--</div><div class="l">hours</div></div>
-    <div class="cell"><div class="n" id="cm">--</div><div class="l">min</div></div>
-    <div class="cell"><div class="n" id="cs">--</div><div class="l">sec</div></div>
+<header class="site-bar">
+  <div class="wrap">
+    <a class="site-mark" href="/" aria-label="blurxy home">blurxy</a>
+    <span class="site-crumb">board / world cup 2026</span>
   </div>
+</header>
+<main class="wrap">
+  <h1>2026 World Cup results</h1>
+  <p class="intro">June 11–July 19, 2026 · Canada, Mexico and the United States</p>
 
-  <div class="facts">
-    <div class="fact"><div class="k">Champions</div><div class="v"><b>Spain</b> beat Argentina 1&ndash;0 after extra time in the final, 19 July 2026, New York/New Jersey.</div></div>
-    <div class="fact"><div class="k">Next up</div><div class="v" id="next"><b>World Cup 2030</b> &middot; Spain, Portugal and Morocco. The centenary opener is in Montevideo on 8 June 2030.</div></div>
-  </div>
+  <section class="feature" aria-labelledby="final">
+    <div class="feature-title">
+      <h2 id="final">World Cup final · After extra time</h2>
+      <p class="match-meta"><time datetime="2026-07-19">Jul 19</time> · East Rutherford, New Jersey</p>
+    </div>
+    <div class="fixture" data-match="760517">
+      <span class="team winner">Spain</span> <span class="score">1–0</span> <span class="team">Argentina</span>
+    </div>
+    <p class="feature-caption">Spain won their second World Cup title.</p>
+  </section>
+  <p class="placements"><span><strong>3rd</strong> England</span><span><strong>4th</strong> France</span></p>
 
-  <a class="back" href="/">&larr; back to the board</a>
+  <nav class="jumps" aria-label="Jump to results">
+    <a class="jump" href="#knockout">Knockout stage</a>
+    <a class="jump" href="#groups">Group stage</a>
+  </nav>
+
+  <section class="stage" aria-labelledby="knockout">
+    <div class="stage-heading">
+      <h2 id="knockout">Knockout stage</h2>
+      <p class="section-note">32 matches, including the final above</p>
+    </div>
+    <div class="rounds">
+      <section>
+        <h3>Third-place match</h3>
+        <ul class="matches" role="list">
+          <li class="match" data-match="760516">
+            <p class="match-meta"><time datetime="2026-07-18">Jul 18</time> · Miami Gardens, Florida</p>
+            <p class="fixture"><span class="team">France</span> <span class="score">4–6</span> <span class="team winner">England</span></p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3>Semi-finals</h3>
+        <ul class="matches" role="list">
+          <li class="match" data-match="760514">
+            <p class="match-meta"><time datetime="2026-07-14">Jul 14</time> · Arlington, Texas</p>
+            <p class="fixture"><span class="team">France</span> <span class="score">0–2</span> <span class="team winner">Spain</span></p>
+          </li>
+          <li class="match" data-match="760515">
+            <p class="match-meta"><time datetime="2026-07-15">Jul 15</time> · Atlanta, Georgia</p>
+            <p class="fixture"><span class="team">England</span> <span class="score">1–2</span> <span class="team winner">Argentina</span></p>
+          </li>
+        </ul>
+      </section>
+      <section class="wide">
+        <h3>Quarter-finals</h3>
+        <ul class="matches" role="list">
+          <li class="match" data-match="760510">
+            <p class="match-meta"><time datetime="2026-07-09">Jul 9</time> · Foxborough, Massachusetts</p>
+            <p class="fixture"><span class="team winner">France</span> <span class="score">2–0</span> <span class="team">Morocco</span></p>
+          </li>
+          <li class="match" data-match="760511">
+            <p class="match-meta"><time datetime="2026-07-10">Jul 10</time> · Inglewood, California</p>
+            <p class="fixture"><span class="team winner">Spain</span> <span class="score">2–1</span> <span class="team">Belgium</span></p>
+          </li>
+          <li class="match" data-match="760512">
+            <p class="match-meta"><time datetime="2026-07-11">Jul 11</time> · Miami Gardens, Florida</p>
+            <p class="fixture"><span class="team">Norway</span> <span class="score">1–2</span> <span class="team winner">England</span></p>
+            <p class="tiebreak">After extra time</p>
+          </li>
+          <li class="match" data-match="760513">
+            <p class="match-meta"><time datetime="2026-07-11">Jul 11</time> · Kansas City, Missouri</p>
+            <p class="fixture"><span class="team winner">Argentina</span> <span class="score">3–1</span> <span class="team">Switzerland</span></p>
+            <p class="tiebreak">After extra time</p>
+          </li>
+        </ul>
+      </section>
+      <section class="wide">
+        <h3>Round of 16</h3>
+        <ul class="matches" role="list">
+          <li class="match" data-match="760502">
+            <p class="match-meta"><time datetime="2026-07-04">Jul 4</time> · Houston, Texas</p>
+            <p class="fixture"><span class="team">Canada</span> <span class="score">0–3</span> <span class="team winner">Morocco</span></p>
+          </li>
+          <li class="match" data-match="760503">
+            <p class="match-meta"><time datetime="2026-07-04">Jul 4</time> · Philadelphia, Pennsylvania</p>
+            <p class="fixture"><span class="team">Paraguay</span> <span class="score">0–1</span> <span class="team winner">France</span></p>
+          </li>
+          <li class="match" data-match="760504">
+            <p class="match-meta"><time datetime="2026-07-05">Jul 5</time> · East Rutherford, New Jersey</p>
+            <p class="fixture"><span class="team">Brazil</span> <span class="score">1–2</span> <span class="team winner">Norway</span></p>
+          </li>
+          <li class="match" data-match="760505">
+            <p class="match-meta"><time datetime="2026-07-05">Jul 5</time> · Mexico City</p>
+            <p class="fixture"><span class="team">Mexico</span> <span class="score">2–3</span> <span class="team winner">England</span></p>
+          </li>
+          <li class="match" data-match="760506">
+            <p class="match-meta"><time datetime="2026-07-06">Jul 6</time> · Arlington, Texas</p>
+            <p class="fixture"><span class="team">Portugal</span> <span class="score">0–1</span> <span class="team winner">Spain</span></p>
+          </li>
+          <li class="match" data-match="760507">
+            <p class="match-meta"><time datetime="2026-07-06">Jul 6</time> · Seattle, Washington</p>
+            <p class="fixture"><span class="team">USA</span> <span class="score">1–4</span> <span class="team winner">Belgium</span></p>
+          </li>
+          <li class="match" data-match="760509">
+            <p class="match-meta"><time datetime="2026-07-07">Jul 7</time> · Atlanta, Georgia</p>
+            <p class="fixture"><span class="team winner">Argentina</span> <span class="score">3–2</span> <span class="team">Egypt</span></p>
+          </li>
+          <li class="match" data-match="760508">
+            <p class="match-meta"><time datetime="2026-07-07">Jul 7</time> · Vancouver</p>
+            <p class="fixture"><span class="team winner">Switzerland</span> <span class="score">0–0</span> <span class="team">Colombia</span></p>
+            <p class="tiebreak">Switzerland won 4–3 on penalties</p>
+          </li>
+        </ul>
+      </section>
+      <section class="wide">
+        <h3>Round of 32</h3>
+        <ul class="matches" role="list">
+          <li class="match" data-match="760486">
+            <p class="match-meta"><time datetime="2026-06-28">Jun 28</time> · Inglewood, California</p>
+            <p class="fixture"><span class="team">South Africa</span> <span class="score">0–1</span> <span class="team winner">Canada</span></p>
+          </li>
+          <li class="match" data-match="760487">
+            <p class="match-meta"><time datetime="2026-06-29">Jun 29</time> · Houston, Texas</p>
+            <p class="fixture"><span class="team winner">Brazil</span> <span class="score">2–1</span> <span class="team">Japan</span></p>
+          </li>
+          <li class="match" data-match="760489">
+            <p class="match-meta"><time datetime="2026-06-29">Jun 29</time> · Foxborough, Massachusetts</p>
+            <p class="fixture"><span class="team">Germany</span> <span class="score">1–1</span> <span class="team winner">Paraguay</span></p>
+            <p class="tiebreak">Paraguay won 4–3 on penalties</p>
+          </li>
+          <li class="match" data-match="760488">
+            <p class="match-meta"><time datetime="2026-06-29">Jun 29</time> · Guadalupe</p>
+            <p class="fixture"><span class="team">Netherlands</span> <span class="score">1–1</span> <span class="team winner">Morocco</span></p>
+            <p class="tiebreak">Morocco won 3–2 on penalties</p>
+          </li>
+          <li class="match" data-match="760490">
+            <p class="match-meta"><time datetime="2026-06-30">Jun 30</time> · Arlington, Texas</p>
+            <p class="fixture"><span class="team">Ivory Coast</span> <span class="score">1–2</span> <span class="team winner">Norway</span></p>
+          </li>
+          <li class="match" data-match="760492">
+            <p class="match-meta"><time datetime="2026-06-30">Jun 30</time> · East Rutherford, New Jersey</p>
+            <p class="fixture"><span class="team winner">France</span> <span class="score">3–0</span> <span class="team">Sweden</span></p>
+          </li>
+          <li class="match" data-match="760491">
+            <p class="match-meta"><time datetime="2026-06-30">Jun 30</time> · Mexico City</p>
+            <p class="fixture"><span class="team winner">Mexico</span> <span class="score">2–0</span> <span class="team">Ecuador</span></p>
+          </li>
+          <li class="match" data-match="760495">
+            <p class="match-meta"><time datetime="2026-07-01">Jul 1</time> · Atlanta, Georgia</p>
+            <p class="fixture"><span class="team winner">England</span> <span class="score">2–1</span> <span class="team">DR Congo</span></p>
+          </li>
+          <li class="match" data-match="760493">
+            <p class="match-meta"><time datetime="2026-07-01">Jul 1</time> · Seattle, Washington</p>
+            <p class="fixture"><span class="team winner">Belgium</span> <span class="score">3–2</span> <span class="team">Senegal</span></p>
+            <p class="tiebreak">After extra time</p>
+          </li>
+          <li class="match" data-match="760494">
+            <p class="match-meta"><time datetime="2026-07-01">Jul 1</time> · Santa Clara, California</p>
+            <p class="fixture"><span class="team winner">USA</span> <span class="score">2–0</span> <span class="team">Bosnia &amp; Herzegovina</span></p>
+          </li>
+          <li class="match" data-match="760497">
+            <p class="match-meta"><time datetime="2026-07-02">Jul 2</time> · Inglewood, California</p>
+            <p class="fixture"><span class="team winner">Spain</span> <span class="score">3–0</span> <span class="team">Austria</span></p>
+          </li>
+          <li class="match" data-match="760496">
+            <p class="match-meta"><time datetime="2026-07-02">Jul 2</time> · Toronto</p>
+            <p class="fixture"><span class="team winner">Portugal</span> <span class="score">2–1</span> <span class="team">Croatia</span></p>
+          </li>
+          <li class="match" data-match="760498">
+            <p class="match-meta"><time datetime="2026-07-02">Jul 2</time> · Vancouver</p>
+            <p class="fixture"><span class="team winner">Switzerland</span> <span class="score">2–0</span> <span class="team">Algeria</span></p>
+          </li>
+          <li class="match" data-match="760499">
+            <p class="match-meta"><time datetime="2026-07-03">Jul 3</time> · Arlington, Texas</p>
+            <p class="fixture"><span class="team">Australia</span> <span class="score">1–1</span> <span class="team winner">Egypt</span></p>
+            <p class="tiebreak">Egypt won 4–2 on penalties</p>
+          </li>
+          <li class="match" data-match="760500">
+            <p class="match-meta"><time datetime="2026-07-03">Jul 3</time> · Miami Gardens, Florida</p>
+            <p class="fixture"><span class="team winner">Argentina</span> <span class="score">3–2</span> <span class="team">Cape Verde</span></p>
+            <p class="tiebreak">After extra time</p>
+          </li>
+          <li class="match" data-match="760501">
+            <p class="match-meta"><time datetime="2026-07-03">Jul 3</time> · Kansas City, Missouri</p>
+            <p class="fixture"><span class="team winner">Colombia</span> <span class="score">1–0</span> <span class="team">Ghana</span></p>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </section>
+
+  <section class="stage" aria-labelledby="groups">
+    <div class="stage-heading">
+      <h2 id="groups">Group stage</h2>
+      <p class="section-note">72 matches across 12 groups</p>
+    </div>
+    <nav class="jumps group-jumps" aria-label="Jump to a group">
+      <a class="jump" href="#group-a" aria-label="Group A">A</a>
+      <a class="jump" href="#group-b" aria-label="Group B">B</a>
+      <a class="jump" href="#group-c" aria-label="Group C">C</a>
+      <a class="jump" href="#group-d" aria-label="Group D">D</a>
+      <a class="jump" href="#group-e" aria-label="Group E">E</a>
+      <a class="jump" href="#group-f" aria-label="Group F">F</a>
+      <a class="jump" href="#group-g" aria-label="Group G">G</a>
+      <a class="jump" href="#group-h" aria-label="Group H">H</a>
+      <a class="jump" href="#group-i" aria-label="Group I">I</a>
+      <a class="jump" href="#group-j" aria-label="Group J">J</a>
+      <a class="jump" href="#group-k" aria-label="Group K">K</a>
+      <a class="jump" href="#group-l" aria-label="Group L">L</a>
+    </nav>
+    <div class="groups">
+      <section>
+        <h3 id="group-a">Group A</h3>
+        <ul class="matches" role="list">
+          <li class="match" data-match="760415">
+            <p class="match-meta"><time datetime="2026-06-11">Jun 11</time> · Mexico City</p>
+            <p class="fixture"><span class="team winner">Mexico</span> <span class="score">2–0</span> <span class="team">South Africa</span></p>
+          </li>
+          <li class="match" data-match="760414">
+            <p class="match-meta"><time datetime="2026-06-11">Jun 11</time> · Guadalajara</p>
+            <p class="fixture"><span class="team winner">South Korea</span> <span class="score">2–1</span> <span class="team">Czechia</span></p>
+          </li>
+          <li class="match" data-match="760438">
+            <p class="match-meta"><time datetime="2026-06-18">Jun 18</time> · Atlanta, Georgia</p>
+            <p class="fixture"><span class="team">Czechia</span> <span class="score">1–1</span> <span class="team">South Africa</span></p>
+          </li>
+          <li class="match" data-match="760441">
+            <p class="match-meta"><time datetime="2026-06-18">Jun 18</time> · Guadalajara</p>
+            <p class="fixture"><span class="team winner">Mexico</span> <span class="score">1–0</span> <span class="team">South Korea</span></p>
+          </li>
+          <li class="match" data-match="760466">
+            <p class="match-meta"><time datetime="2026-06-24">Jun 24</time> · Guadalupe</p>
+            <p class="fixture"><span class="team winner">South Africa</span> <span class="score">1–0</span> <span class="team">South Korea</span></p>
+          </li>
+          <li class="match" data-match="760467">
+            <p class="match-meta"><time datetime="2026-06-24">Jun 24</time> · Mexico City</p>
+            <p class="fixture"><span class="team">Czechia</span> <span class="score">0–3</span> <span class="team winner">Mexico</span></p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3 id="group-b">Group B</h3>
+        <ul class="matches" role="list">
+          <li class="match" data-match="760416">
+            <p class="match-meta"><time datetime="2026-06-12">Jun 12</time> · Toronto</p>
+            <p class="fixture"><span class="team">Canada</span> <span class="score">1–1</span> <span class="team">Bosnia &amp; Herzegovina</span></p>
+          </li>
+          <li class="match" data-match="760420">
+            <p class="match-meta"><time datetime="2026-06-13">Jun 13</time> · Santa Clara, California</p>
+            <p class="fixture"><span class="team">Qatar</span> <span class="score">1–1</span> <span class="team">Switzerland</span></p>
+          </li>
+          <li class="match" data-match="760439">
+            <p class="match-meta"><time datetime="2026-06-18">Jun 18</time> · Inglewood, California</p>
+            <p class="fixture"><span class="team winner">Switzerland</span> <span class="score">4–1</span> <span class="team">Bosnia &amp; Herzegovina</span></p>
+          </li>
+          <li class="match" data-match="760440">
+            <p class="match-meta"><time datetime="2026-06-18">Jun 18</time> · Vancouver</p>
+            <p class="fixture"><span class="team winner">Canada</span> <span class="score">6–0</span> <span class="team">Qatar</span></p>
+          </li>
+          <li class="match" data-match="760462">
+            <p class="match-meta"><time datetime="2026-06-24">Jun 24</time> · Seattle, Washington</p>
+            <p class="fixture"><span class="team winner">Bosnia &amp; Herzegovina</span> <span class="score">3–1</span> <span class="team">Qatar</span></p>
+          </li>
+          <li class="match" data-match="760463">
+            <p class="match-meta"><time datetime="2026-06-24">Jun 24</time> · Vancouver</p>
+            <p class="fixture"><span class="team winner">Switzerland</span> <span class="score">2–1</span> <span class="team">Canada</span></p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3 id="group-c">Group C</h3>
+        <ul class="matches" role="list">
+          <li class="match" data-match="760419">
+            <p class="match-meta"><time datetime="2026-06-13">Jun 13</time> · East Rutherford, New Jersey</p>
+            <p class="fixture"><span class="team">Brazil</span> <span class="score">1–1</span> <span class="team">Morocco</span></p>
+          </li>
+          <li class="match" data-match="760418">
+            <p class="match-meta"><time datetime="2026-06-13">Jun 13</time> · Foxborough, Massachusetts</p>
+            <p class="fixture"><span class="team">Haiti</span> <span class="score">0–1</span> <span class="team winner">Scotland</span></p>
+          </li>
+          <li class="match" data-match="760445">
+            <p class="match-meta"><time datetime="2026-06-19">Jun 19</time> · Foxborough, Massachusetts</p>
+            <p class="fixture"><span class="team">Scotland</span> <span class="score">0–1</span> <span class="team winner">Morocco</span></p>
+          </li>
+          <li class="match" data-match="760444">
+            <p class="match-meta"><time datetime="2026-06-19">Jun 19</time> · Philadelphia, Pennsylvania</p>
+            <p class="fixture"><span class="team winner">Brazil</span> <span class="score">3–0</span> <span class="team">Haiti</span></p>
+          </li>
+          <li class="match" data-match="760464">
+            <p class="match-meta"><time datetime="2026-06-24">Jun 24</time> · Atlanta, Georgia</p>
+            <p class="fixture"><span class="team winner">Morocco</span> <span class="score">4–2</span> <span class="team">Haiti</span></p>
+          </li>
+          <li class="match" data-match="760465">
+            <p class="match-meta"><time datetime="2026-06-24">Jun 24</time> · Miami Gardens, Florida</p>
+            <p class="fixture"><span class="team">Scotland</span> <span class="score">0–3</span> <span class="team winner">Brazil</span></p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3 id="group-d">Group D</h3>
+        <ul class="matches" role="list">
+          <li class="match" data-match="760417">
+            <p class="match-meta"><time datetime="2026-06-12">Jun 12</time> · Inglewood, California</p>
+            <p class="fixture"><span class="team winner">USA</span> <span class="score">4–1</span> <span class="team">Paraguay</span></p>
+          </li>
+          <li class="match" data-match="760421">
+            <p class="match-meta"><time datetime="2026-06-13">Jun 13</time> · Vancouver</p>
+            <p class="fixture"><span class="team winner">Australia</span> <span class="score">2–0</span> <span class="team">Türkiye</span></p>
+          </li>
+          <li class="match" data-match="760442">
+            <p class="match-meta"><time datetime="2026-06-19">Jun 19</time> · Seattle, Washington</p>
+            <p class="fixture"><span class="team winner">USA</span> <span class="score">2–0</span> <span class="team">Australia</span></p>
+          </li>
+          <li class="match" data-match="760443">
+            <p class="match-meta"><time datetime="2026-06-19">Jun 19</time> · Santa Clara, California</p>
+            <p class="fixture"><span class="team">Türkiye</span> <span class="score">0–1</span> <span class="team winner">Paraguay</span></p>
+          </li>
+          <li class="match" data-match="760469">
+            <p class="match-meta"><time datetime="2026-06-25">Jun 25</time> · Santa Clara, California</p>
+            <p class="fixture"><span class="team">Paraguay</span> <span class="score">0–0</span> <span class="team">Australia</span></p>
+          </li>
+          <li class="match" data-match="760470">
+            <p class="match-meta"><time datetime="2026-06-25">Jun 25</time> · Inglewood, California</p>
+            <p class="fixture"><span class="team winner">Türkiye</span> <span class="score">3–2</span> <span class="team">USA</span></p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3 id="group-e">Group E</h3>
+        <ul class="matches" role="list">
+          <li class="match" data-match="760422">
+            <p class="match-meta"><time datetime="2026-06-14">Jun 14</time> · Houston, Texas</p>
+            <p class="fixture"><span class="team winner">Germany</span> <span class="score">7–1</span> <span class="team">Curaçao</span></p>
+          </li>
+          <li class="match" data-match="760423">
+            <p class="match-meta"><time datetime="2026-06-14">Jun 14</time> · Philadelphia, Pennsylvania</p>
+            <p class="fixture"><span class="team winner">Ivory Coast</span> <span class="score">1–0</span> <span class="team">Ecuador</span></p>
+          </li>
+          <li class="match" data-match="760448">
+            <p class="match-meta"><time datetime="2026-06-20">Jun 20</time> · Toronto</p>
+            <p class="fixture"><span class="team winner">Germany</span> <span class="score">2–1</span> <span class="team">Ivory Coast</span></p>
+          </li>
+          <li class="match" data-match="760446">
+            <p class="match-meta"><time datetime="2026-06-20">Jun 20</time> · Kansas City, Missouri</p>
+            <p class="fixture"><span class="team">Ecuador</span> <span class="score">0–0</span> <span class="team">Curaçao</span></p>
+          </li>
+          <li class="match" data-match="760468">
+            <p class="match-meta"><time datetime="2026-06-25">Jun 25</time> · East Rutherford, New Jersey</p>
+            <p class="fixture"><span class="team winner">Ecuador</span> <span class="score">2–1</span> <span class="team">Germany</span></p>
+          </li>
+          <li class="match" data-match="760473">
+            <p class="match-meta"><time datetime="2026-06-25">Jun 25</time> · Philadelphia, Pennsylvania</p>
+            <p class="fixture"><span class="team">Curaçao</span> <span class="score">0–2</span> <span class="team winner">Ivory Coast</span></p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3 id="group-f">Group F</h3>
+        <ul class="matches" role="list">
+          <li class="match" data-match="760425">
+            <p class="match-meta"><time datetime="2026-06-14">Jun 14</time> · Arlington, Texas</p>
+            <p class="fixture"><span class="team">Netherlands</span> <span class="score">2–2</span> <span class="team">Japan</span></p>
+          </li>
+          <li class="match" data-match="760424">
+            <p class="match-meta"><time datetime="2026-06-14">Jun 14</time> · Guadalupe</p>
+            <p class="fixture"><span class="team winner">Sweden</span> <span class="score">5–1</span> <span class="team">Tunisia</span></p>
+          </li>
+          <li class="match" data-match="760447">
+            <p class="match-meta"><time datetime="2026-06-20">Jun 20</time> · Houston, Texas</p>
+            <p class="fixture"><span class="team winner">Netherlands</span> <span class="score">5–1</span> <span class="team">Sweden</span></p>
+          </li>
+          <li class="match" data-match="760449">
+            <p class="match-meta"><time datetime="2026-06-20">Jun 20</time> · Guadalupe</p>
+            <p class="fixture"><span class="team">Tunisia</span> <span class="score">0–4</span> <span class="team winner">Japan</span></p>
+          </li>
+          <li class="match" data-match="760471">
+            <p class="match-meta"><time datetime="2026-06-25">Jun 25</time> · Arlington, Texas</p>
+            <p class="fixture"><span class="team">Japan</span> <span class="score">1–1</span> <span class="team">Sweden</span></p>
+          </li>
+          <li class="match" data-match="760472">
+            <p class="match-meta"><time datetime="2026-06-25">Jun 25</time> · Kansas City, Missouri</p>
+            <p class="fixture"><span class="team">Tunisia</span> <span class="score">1–3</span> <span class="team winner">Netherlands</span></p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3 id="group-g">Group G</h3>
+        <ul class="matches" role="list">
+          <li class="match" data-match="760426">
+            <p class="match-meta"><time datetime="2026-06-15">Jun 15</time> · Seattle, Washington</p>
+            <p class="fixture"><span class="team">Belgium</span> <span class="score">1–1</span> <span class="team">Egypt</span></p>
+          </li>
+          <li class="match" data-match="760427">
+            <p class="match-meta"><time datetime="2026-06-15">Jun 15</time> · Inglewood, California</p>
+            <p class="fixture"><span class="team">Iran</span> <span class="score">2–2</span> <span class="team">New Zealand</span></p>
+          </li>
+          <li class="match" data-match="760451">
+            <p class="match-meta"><time datetime="2026-06-21">Jun 21</time> · Inglewood, California</p>
+            <p class="fixture"><span class="team">Belgium</span> <span class="score">0–0</span> <span class="team">Iran</span></p>
+          </li>
+          <li class="match" data-match="760452">
+            <p class="match-meta"><time datetime="2026-06-21">Jun 21</time> · Vancouver</p>
+            <p class="fixture"><span class="team">New Zealand</span> <span class="score">1–3</span> <span class="team winner">Egypt</span></p>
+          </li>
+          <li class="match" data-match="760476">
+            <p class="match-meta"><time datetime="2026-06-26">Jun 26</time> · Seattle, Washington</p>
+            <p class="fixture"><span class="team">Egypt</span> <span class="score">1–1</span> <span class="team">Iran</span></p>
+          </li>
+          <li class="match" data-match="760477">
+            <p class="match-meta"><time datetime="2026-06-26">Jun 26</time> · Vancouver</p>
+            <p class="fixture"><span class="team">New Zealand</span> <span class="score">1–5</span> <span class="team winner">Belgium</span></p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3 id="group-h">Group H</h3>
+        <ul class="matches" role="list">
+          <li class="match" data-match="760428">
+            <p class="match-meta"><time datetime="2026-06-15">Jun 15</time> · Atlanta, Georgia</p>
+            <p class="fixture"><span class="team">Spain</span> <span class="score">0–0</span> <span class="team">Cape Verde</span></p>
+          </li>
+          <li class="match" data-match="760429">
+            <p class="match-meta"><time datetime="2026-06-15">Jun 15</time> · Miami Gardens, Florida</p>
+            <p class="fixture"><span class="team">Saudi Arabia</span> <span class="score">1–1</span> <span class="team">Uruguay</span></p>
+          </li>
+          <li class="match" data-match="760453">
+            <p class="match-meta"><time datetime="2026-06-21">Jun 21</time> · Atlanta, Georgia</p>
+            <p class="fixture"><span class="team winner">Spain</span> <span class="score">4–0</span> <span class="team">Saudi Arabia</span></p>
+          </li>
+          <li class="match" data-match="760450">
+            <p class="match-meta"><time datetime="2026-06-21">Jun 21</time> · Miami Gardens, Florida</p>
+            <p class="fixture"><span class="team">Uruguay</span> <span class="score">2–2</span> <span class="team">Cape Verde</span></p>
+          </li>
+          <li class="match" data-match="760478">
+            <p class="match-meta"><time datetime="2026-06-26">Jun 26</time> · Houston, Texas</p>
+            <p class="fixture"><span class="team">Cape Verde</span> <span class="score">0–0</span> <span class="team">Saudi Arabia</span></p>
+          </li>
+          <li class="match" data-match="760479">
+            <p class="match-meta"><time datetime="2026-06-26">Jun 26</time> · Guadalajara</p>
+            <p class="fixture"><span class="team">Uruguay</span> <span class="score">0–1</span> <span class="team winner">Spain</span></p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3 id="group-i">Group I</h3>
+        <ul class="matches" role="list">
+          <li class="match" data-match="760432">
+            <p class="match-meta"><time datetime="2026-06-16">Jun 16</time> · East Rutherford, New Jersey</p>
+            <p class="fixture"><span class="team winner">France</span> <span class="score">3–1</span> <span class="team">Senegal</span></p>
+          </li>
+          <li class="match" data-match="760430">
+            <p class="match-meta"><time datetime="2026-06-16">Jun 16</time> · Foxborough, Massachusetts</p>
+            <p class="fixture"><span class="team">Iraq</span> <span class="score">1–4</span> <span class="team winner">Norway</span></p>
+          </li>
+          <li class="match" data-match="760457">
+            <p class="match-meta"><time datetime="2026-06-22">Jun 22</time> · Philadelphia, Pennsylvania</p>
+            <p class="fixture"><span class="team winner">France</span> <span class="score">3–0</span> <span class="team">Iraq</span></p>
+          </li>
+          <li class="match" data-match="760454">
+            <p class="match-meta"><time datetime="2026-06-22">Jun 22</time> · East Rutherford, New Jersey</p>
+            <p class="fixture"><span class="team winner">Norway</span> <span class="score">3–2</span> <span class="team">Senegal</span></p>
+          </li>
+          <li class="match" data-match="760474">
+            <p class="match-meta"><time datetime="2026-06-26">Jun 26</time> · Toronto</p>
+            <p class="fixture"><span class="team winner">Senegal</span> <span class="score">5–0</span> <span class="team">Iraq</span></p>
+          </li>
+          <li class="match" data-match="760475">
+            <p class="match-meta"><time datetime="2026-06-26">Jun 26</time> · Foxborough, Massachusetts</p>
+            <p class="fixture"><span class="team">Norway</span> <span class="score">1–4</span> <span class="team winner">France</span></p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3 id="group-j">Group J</h3>
+        <ul class="matches" role="list">
+          <li class="match" data-match="760433">
+            <p class="match-meta"><time datetime="2026-06-16">Jun 16</time> · Kansas City, Missouri</p>
+            <p class="fixture"><span class="team winner">Argentina</span> <span class="score">3–0</span> <span class="team">Algeria</span></p>
+          </li>
+          <li class="match" data-match="760431">
+            <p class="match-meta"><time datetime="2026-06-16">Jun 16</time> · Santa Clara, California</p>
+            <p class="fixture"><span class="team winner">Austria</span> <span class="score">3–1</span> <span class="team">Jordan</span></p>
+          </li>
+          <li class="match" data-match="760456">
+            <p class="match-meta"><time datetime="2026-06-22">Jun 22</time> · Arlington, Texas</p>
+            <p class="fixture"><span class="team winner">Argentina</span> <span class="score">2–0</span> <span class="team">Austria</span></p>
+          </li>
+          <li class="match" data-match="760455">
+            <p class="match-meta"><time datetime="2026-06-22">Jun 22</time> · Santa Clara, California</p>
+            <p class="fixture"><span class="team">Jordan</span> <span class="score">1–2</span> <span class="team winner">Algeria</span></p>
+          </li>
+          <li class="match" data-match="760483">
+            <p class="match-meta"><time datetime="2026-06-27">Jun 27</time> · Arlington, Texas</p>
+            <p class="fixture"><span class="team">Jordan</span> <span class="score">1–3</span> <span class="team winner">Argentina</span></p>
+          </li>
+          <li class="match" data-match="760484">
+            <p class="match-meta"><time datetime="2026-06-27">Jun 27</time> · Kansas City, Missouri</p>
+            <p class="fixture"><span class="team">Algeria</span> <span class="score">3–3</span> <span class="team">Austria</span></p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3 id="group-k">Group K</h3>
+        <ul class="matches" role="list">
+          <li class="match" data-match="760435">
+            <p class="match-meta"><time datetime="2026-06-17">Jun 17</time> · Houston, Texas</p>
+            <p class="fixture"><span class="team">Portugal</span> <span class="score">1–1</span> <span class="team">DR Congo</span></p>
+          </li>
+          <li class="match" data-match="760436">
+            <p class="match-meta"><time datetime="2026-06-17">Jun 17</time> · Mexico City</p>
+            <p class="fixture"><span class="team">Uzbekistan</span> <span class="score">1–3</span> <span class="team winner">Colombia</span></p>
+          </li>
+          <li class="match" data-match="760461">
+            <p class="match-meta"><time datetime="2026-06-23">Jun 23</time> · Houston, Texas</p>
+            <p class="fixture"><span class="team winner">Portugal</span> <span class="score">5–0</span> <span class="team">Uzbekistan</span></p>
+          </li>
+          <li class="match" data-match="760459">
+            <p class="match-meta"><time datetime="2026-06-23">Jun 23</time> · Guadalajara</p>
+            <p class="fixture"><span class="team winner">Colombia</span> <span class="score">1–0</span> <span class="team">DR Congo</span></p>
+          </li>
+          <li class="match" data-match="760481">
+            <p class="match-meta"><time datetime="2026-06-27">Jun 27</time> · Miami Gardens, Florida</p>
+            <p class="fixture"><span class="team">Colombia</span> <span class="score">0–0</span> <span class="team">Portugal</span></p>
+          </li>
+          <li class="match" data-match="760482">
+            <p class="match-meta"><time datetime="2026-06-27">Jun 27</time> · Atlanta, Georgia</p>
+            <p class="fixture"><span class="team winner">DR Congo</span> <span class="score">3–1</span> <span class="team">Uzbekistan</span></p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3 id="group-l">Group L</h3>
+        <ul class="matches" role="list">
+          <li class="match" data-match="760437">
+            <p class="match-meta"><time datetime="2026-06-17">Jun 17</time> · Arlington, Texas</p>
+            <p class="fixture"><span class="team winner">England</span> <span class="score">4–2</span> <span class="team">Croatia</span></p>
+          </li>
+          <li class="match" data-match="760434">
+            <p class="match-meta"><time datetime="2026-06-17">Jun 17</time> · Toronto</p>
+            <p class="fixture"><span class="team winner">Ghana</span> <span class="score">1–0</span> <span class="team">Panama</span></p>
+          </li>
+          <li class="match" data-match="760458">
+            <p class="match-meta"><time datetime="2026-06-23">Jun 23</time> · Foxborough, Massachusetts</p>
+            <p class="fixture"><span class="team">England</span> <span class="score">0–0</span> <span class="team">Ghana</span></p>
+          </li>
+          <li class="match" data-match="760460">
+            <p class="match-meta"><time datetime="2026-06-23">Jun 23</time> · Toronto</p>
+            <p class="fixture"><span class="team">Panama</span> <span class="score">0–1</span> <span class="team winner">Croatia</span></p>
+          </li>
+          <li class="match" data-match="760480">
+            <p class="match-meta"><time datetime="2026-06-27">Jun 27</time> · Philadelphia, Pennsylvania</p>
+            <p class="fixture"><span class="team winner">Croatia</span> <span class="score">2–1</span> <span class="team">Ghana</span></p>
+          </li>
+          <li class="match" data-match="760485">
+            <p class="match-meta"><time datetime="2026-06-27">Jun 27</time> · East Rutherford, New Jersey</p>
+            <p class="fixture"><span class="team">Panama</span> <span class="score">0–2</span> <span class="team winner">England</span></p>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </section>
+
+  <footer>
+    <p>Match dates are local to each venue. Scores checked against ESPN. See <a href="https://www.fifa.com/en/articles/match-schedule-fixtures-results-teams-stadiums">FIFA’s full tournament results</a>.</p>
+    <a class="back" href="/">&larr; Back to the board</a>
+  </footer>
 </main>
-<script>
-/* Every /worldcup26 URL serves this page. Show the clean address. */
-try{ if(location.pathname!=="/worldcup26/"||location.search||location.hash) history.replaceState(null,"","/worldcup26/"); }catch(e){}
-
-/* Known tournaments. A later edition without announced dates counts to 1 January of its year and says so. */
-const CUPS=[
- {year:2030, start:"2030-06-08T00:00:00-03:00", end:"2030-07-22T00:00:00Z", day:"8 June 2030", where:"Spain, Portugal and Morocco. The centenary opener is in Montevideo on 8 June 2030."},
- {year:2034, start:null, end:null, where:"Saudi Arabia. Dates not announced yet."}
-];
-function nextCup(now){
- for(const c of CUPS){
-  const s=c.start?new Date(c.start):new Date(c.year+"-01-01T00:00:00Z"), e=c.end?new Date(c.end):null;
-  if(e&&now>=s&&now<e) return {c, s, live:true};
-  if(now<s) return {c, s, live:false};
- }
- let y=now.getUTCFullYear()+1; while(y%4!==2) y++;
- return {c:{year:y,where:"Dates not announced yet."}, s:new Date(y+"-01-01T00:00:00Z"), live:false};
-}
-/* Calendar difference: whole years, then months, then days. */
-function ymd(from,to){
- let y=0,m=0,d=0; const t=new Date(from);
- const add=(dt,k,n)=>{const x=new Date(dt); if(k==="y")x.setFullYear(x.getFullYear()+n); else if(k==="m")x.setMonth(x.getMonth()+n); else x.setDate(x.getDate()+n); return x;};
- while(add(t,"y",y+1)<=to) y++;
- let a=add(t,"y",y); while(add(a,"m",m+1)<=to) m++;
- let b=add(a,"m",m); while(add(b,"d",d+1)<=to) d++;
- return {y,m,d};
-}
-const plural=(n,w)=>n+" "+w+(n===1?"":"s");
-const pad=n=>String(n).padStart(2,"0");
-function tick(){
- const now=new Date(), {c,s,live}=nextCup(now);
- document.getElementById("next").innerHTML="<b>World Cup "+c.year+"</b> &middot; "+c.where;
- if(live){
-  document.getElementById("see").textContent="Plot twist: the "+c.year+" World Cup is on right now.";
-  document.getElementById("exact").textContent="Go watch it.";
-  ["cd","ch","cm","cs"].forEach(id=>document.getElementById(id).textContent="00");
-  return;
- }
- const ms=s-now, k=ymd(now,s), parts=[];
- if(k.y)parts.push(plural(k.y,"year")); if(k.m)parts.push(plural(k.m,"month")); if(k.d||!parts.length)parts.push(plural(k.d,"day"));
- const years=Math.max(1,Math.round(ms/(365.2425*864e5)));
- document.getElementById("see").textContent="See you in "+plural(years,"year")+".";
- const exact=parts.length>1?parts.slice(0,-1).join(", ")+" and "+parts[parts.length-1]:parts[0];
- document.getElementById("exact").innerHTML="Well, <b>"+exact+"</b>, to be exact. First ball: "+(c.day||s.toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric",timeZone:"UTC"}))+".";
- const sec=Math.floor(ms/1000);
- document.getElementById("cd").textContent=Math.floor(sec/86400);
- document.getElementById("ch").textContent=pad(Math.floor(sec%86400/3600));
- document.getElementById("cm").textContent=pad(Math.floor(sec%3600/60));
- document.getElementById("cs").textContent=pad(sec%60);
-}
-tick(); setInterval(tick,1000);
-</script>
 </body>
 </html>
